@@ -1,0 +1,29 @@
+.row {
+  max-width: 80rem;
+  // background-color: #eee;
+  margin: 0 auto;
+  // margin-right: 3rem;
+
+  .col-1-of-2 {
+    width: 20rem;
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 30rem;
+    }
+  }
+
+  .col-1-of-4 {
+    float: left;
+    margin: 3rem;
+    // display: inline-block;
+  }
+
+  .col-1-of-3 {
+    float: left;
+    width: 18rem;
+    margin-right: 2rem;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+  }
+}

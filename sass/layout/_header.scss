@@ -1,0 +1,38 @@
+.header {
+  height: 98vh;
+  background-image: linear-gradient(
+      to left bottom,
+      rgba($color-prim, 0.555),
+      rgba($color-sec, 0.571)
+    ),
+    url(../pexels-lucie-liz-3165335.jpg);
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 75% 100%, 25% 100%, 0 85%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+}
+
+.logo {
+  height: 100px;
+
+  animation-name: moveInLeft;
+
+  animation-duration: 2s;
+}
+
+.tex-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 55px;
+}

@@ -1,0 +1,78 @@
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 26rem;
+  margin-bottom: 3rem;
+
+  &-side {
+    height: 26rem;
+
+    transition: all 0.8s;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
+
+    &_front {
+      background-color: red;
+
+      &-img {
+        height: 26rem;
+        background-size: cover;
+        border-radius: 3px;
+        &_1 {
+          background-image: url(/image/2k_dow.jpg);
+        }
+        &_2 {
+          background-image: url(/image/pubg_do.webp);
+        }
+        &_3 {
+          background-image: url(/image/gta\ 5_do.jpg);
+        }
+        &_4 {
+          background-image: url(/image/cod_do.jpg);
+        }
+      }
+    }
+
+    &_back {
+      color: transparent;
+      transform: rotateY(180deg);
+      &_1 {
+        filter: blur(3px) brightness(95%);
+        &-img {
+          height: 26rem;
+          background-size: cover;
+          transform: rotateY(180deg) scale(0.985);
+          &_1 {
+            background-image: url(/image/2k_dow.jpg);
+          }
+          &_2 {
+            background-image: url(/image/pubg_do.webp);
+          }
+          &_3 {
+            background-image: url(/image/gta\ 5_do.jpg);
+          }
+          &_4 {
+            background-image: url(/image/cod_do.jpg);
+          }
+        }
+      }
+    }
+  }
+
+  &:hover &-side_front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-side_back {
+    transform: rotateY(0deg);
+  }
+  &-cat {
+    margin-top: -8rem;
+    margin-left: 2.5rem;
+  }
+}
